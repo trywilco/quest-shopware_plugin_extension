@@ -1,0 +1,29 @@
+id: install_custom_plugin
+learningObjectives:
+  - Install a custom plugin in Shopware
+hints:
+  - Navigate to Extensions > My extensions.
+  - Find 'Plugin with custom storefront controller' and click 'Install'.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Time to install our custom plugin. Head over to Extensions > My
+              extensions.
+          - text: Find 'Plugin with custom storefront controller' in the list and click
+              'Install'.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Nice work! The plugin is installed. Now, let's customize it.
+      - actionId: finish_step

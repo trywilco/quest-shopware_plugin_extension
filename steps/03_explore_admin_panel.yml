@@ -1,0 +1,30 @@
+id: explore_admin_panel
+learningObjectives:
+  - Log in to the admin panel and explore its features
+hints:
+  - "Use the default credentials: user: admin, password: shopware."
+  - Explore the various sections of the admin panel to see what you can do.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Now, let's log in to the admin panel using the default credentials (user:
+              admin, password: shopware)."
+          - text: The admin panel is your control center for managing the store. Explore its
+              features and see what you can do.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Great! You've got the hang of the admin panel. Let's install a custom
+                plugin next.
+      - actionId: finish_step

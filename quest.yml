@@ -1,0 +1,46 @@
+id: shopware_plugin_extension
+title: Developing a Shopware Plugin
+subtitle: Enhance your store with custom plugins
+description: In this quest, you'll learn how to develop a plugin extension for a
+  Shopware store. You'll start by understanding the benefits of Shopware and
+  plugins, then run a shop on your codespace, explore the admin panel, install a
+  custom plugin, and finally customize it to suit your needs.
+summary: Congratulations! You've successfully developed a plugin extension for a
+  Shopware store. You learned about the benefits of Shopware and plugins, ran a
+  shop on your codespace, explored the admin panel, installed a custom plugin,
+  and customized it to enhance your store.
+slogan: Unleash the power of Shopware plugins!
+level: intermediate
+type: PROMPT
+duration: 2.5
+questDependency: null
+repository: https://github.com/trywilco/AcademyStorefrontController
+steps:
+  - 01_shopware_intro
+  - 02_run_shopware_store
+  - 03_explore_admin_panel
+  - 04_install_custom_plugin
+  - 05_customize_plugin
+skills:
+  - backend
+  - devops
+  - e-commerce
+  - plugin-development
+  - shopware
+messages:
+  questFinished:
+    person: lucca
+    messages:
+      - text: Fantastic job! You've successfully developed and customized a Shopware
+          plugin. Your store is now more powerful and tailored to your needs.
+          Keep up the great work!
+resources:
+  - name: github
+    config: {}
+  - name: codespaces
+    config: {}
+frameworks:
+  backend: null
+learningMaterials: []
+disableAIAssistance: false
+disableCodespaces: false

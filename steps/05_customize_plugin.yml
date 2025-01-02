@@ -1,0 +1,43 @@
+id: customize_plugin
+learningObjectives:
+  - Customize the installed plugin and open a PR
+hints:
+  - Think of a simple customization you can make to the plugin.
+  - Remember to open a pull request with your changes.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Let's get creative! Customize the installed plugin to suit your needs.
+          - text: Once you've made your changes, open a pull request so I can take a look.
+trigger:
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: ${eventType}
+      cases:
+        github_pr_opened:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Checking your customization now!
+            - actionId: github_pr_comment
+              params:
+                person: lucca
+                message: Checking your customization now.
+        github_pr_workflow_complete_success:
+          do:
+            - actionId: github_pr_review
+              params:
+                solution: Ensure the customization is relevant and enhances the plugin's
+                  functionality.
+                messages:
+                  person: lucca
+                  approved: Great customization! Let's merge it.
+        github_pr_merged:
+          do:
+            - actionId: finish_step

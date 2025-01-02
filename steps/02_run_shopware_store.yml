@@ -1,0 +1,29 @@
+id: run_shopware_store
+learningObjectives:
+  - Run the Shopware store and verify its functionality
+hints:
+  - Use the command `docker-compose up` to start the shop.
+  - Check the store's web page to ensure it's running correctly.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Let's get your Shopware store up and running. Use `docker-compose up` to
+              start the shop, and then open the web page to see it in action.
+          - text: Once the store is running, take a look around and let me know what the
+              material of the variant product is. This will help us ensure
+              everything is working smoothly.
+trigger:
+  type: user_message
+  params:
+    text: The material of the variant product is
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Awesome! The store is running perfectly. Let's move on to the admin panel.
+      - actionId: finish_step
