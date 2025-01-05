@@ -11,8 +11,8 @@ startFlow:
         person: lucca
         messages:
           - text: Welcome to the world of Shopware! Today, we're diving into the realm of plugins and how they can supercharge your store.
-          - text: Shopware is built with developers in mind - it uses modern PHP practices and provides a robust plugin system that lets you extend your shop without touching the core code.
-          - text: Through plugins, you can add new features, integrate with other services, or customize how your shop works. That's what makes Shopware such a practical choice for building online stores.
+          - text: [Shopware](https://www.shopware.com/) is built with developers in mind - it uses modern PHP practices and provides a robust plugin system that lets you extend your shop without touching the core code.
+          - text: Through [plugins](https://developer.shopware.com/docs/guides/plugins/plugins/), you can add new features, integrate with other services, or customize how your shop works. That's what makes Shopware such a practical choice for building online stores.
           - text: Let's get started by understanding what makes Shopware and its plugins so beneficial.
     - actionId: ready_message
       params:
