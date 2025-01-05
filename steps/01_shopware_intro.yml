@@ -10,13 +10,10 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: Welcome to the world of Shopware! Today, we're diving into the realm of
-              plugins and how they can supercharge your store.
-          - text: Shopware is a powerful e-commerce platform that allows for extensive
-              customization through plugins. These plugins can add new features,
-              improve user experience, and streamline operations.
-          - text: Let's get started by understanding what makes Shopware and its plugins so
-              beneficial.
+          - text: Welcome to the world of Shopware! Today, we're diving into the realm of plugins and how they can supercharge your store.
+          - text: Shopware is built with developers in mind - it uses modern PHP practices and provides a robust plugin system that lets you extend your shop without touching the core code.
+          - text: Through plugins, you can add new features, integrate with other services, or customize how your shop works. That's what makes Shopware such a practical choice for building online stores.
+          - text: Let's get started by understanding what makes Shopware and its plugins so beneficial.
     - actionId: ready_message
       params:
         person: lucca
@@ -28,6 +25,5 @@ trigger:
         params:
           person: lucca
           messages:
-            - text: Great! Now that you know why Shopware is awesome, let's move on to running
-                your shop.
+            - text: Great! Let's move on to running your shop.
       - actionId: finish_step
