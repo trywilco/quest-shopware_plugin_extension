@@ -10,7 +10,7 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: "Now, let's log in to the admin panel using the default credentials (user:
+          - text: "Now, let's :instruction[log in to the admin panel[] using the default credentials (user:
               admin, password: shopware)."
           - text: The admin panel is your control center for managing the store. Explore its
               features and see what you can do.
