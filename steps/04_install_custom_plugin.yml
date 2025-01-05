@@ -10,10 +10,10 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: Time to :instruction[install our custom plugin]. Head over to Extensions > My
-              extensions.
-          - text: Find 'Plugin with custom storefront controller' in the list and click
-              'Install'.
+          - text: Time to :instruction[install our custom plugin]. This is a simple demo plugin that adds a random image link to product pages - it's designed to show you the basics of plugin development in Shopware.
+          - text: While the functionality is basic, it demonstrates key concepts like custom controllers and template extensions.
+          - text: Head over to Extensions > My extensions and find 'Plugin with custom storefront controller' in the list.
+          - text: Click 'Install' to activate the plugin.
     - actionId: ready_message
       params:
         person: lucca
@@ -25,5 +25,5 @@ trigger:
         params:
           person: lucca
           messages:
-            - text: Nice work! The plugin is installed. Now, let's customize it.
+            - text: Great! The demo plugin is now installed. This simple example will help us understand how Shopware plugins work before we create more complex ones.
       - actionId: finish_step
