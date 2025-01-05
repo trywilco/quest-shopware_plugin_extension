@@ -16,14 +16,13 @@ duration: 2.5
 questDependency: null
 repository: https://github.com/trywilco/AcademyStorefrontController
 steps:
-  - 01_shopware_intro
-  - 02_run_shopware_store
-  - 03_explore_admin_panel
-  - 04_install_custom_plugin
-  - 05_customize_plugin
+  - shopware_intro
+  - run_shopware_store
+  - explore_admin_panel
+  - install_custom_plugin
+  - customize_plugin
 skills:
   - backend
-  - devops
   - e-commerce
   - plugin-development
   - shopware
@@ -34,13 +33,5 @@ messages:
       - text: Fantastic job! You've successfully developed and customized a Shopware
           plugin. Your store is now more powerful and tailored to your needs.
           Keep up the great work!
-resources:
-  - name: github
-    config: {}
-  - name: codespaces
-    config: {}
 frameworks:
   backend: null
-learningMaterials: []
-disableAIAssistance: false
-disableCodespaces: false
