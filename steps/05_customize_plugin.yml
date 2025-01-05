@@ -2,42 +2,22 @@ id: customize_plugin
 learningObjectives:
   - Customize the installed plugin and open a PR
 hints:
-  - Think of a simple customization you can make to the plugin.
-  - Remember to open a pull request with your changes.
+  - Look for the image.html modal component in the plugin code
+  - The product name should be passed to the modal title using the controller
 startFlow:
   do:
     - actionId: bot_message
       params:
         person: lucca
         messages:
-          - text: Let's get creative! Customize the installed plugin to suit your needs.
-          - text: Once you've made your changes, open a pull request so I can take a look.
+          - text: Let's improve the "View Image" functionality! When users click the "View Image" button, we want to show the product name in the modal's title.
+          - text: You'll need to modify the modal component to pass and display the product name. Once you're done, open a pull request for review.
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
-    switch:
-      key: ${eventType}
-      cases:
-        github_pr_opened:
-          do:
-            - actionId: bot_message
-              params:
-                person: lucca
-                messages:
-                  - text: Checking your customization now!
-            - actionId: github_pr_comment
-              params:
-                person: lucca
-                message: Checking your customization now.
-        github_pr_workflow_complete_success:
-          do:
-            - actionId: github_pr_review
-              params:
-                solution: Ensure the customization is relevant and enhances the plugin's
-                  functionality.
-                messages:
-                  person: lucca
-                  approved: Great customization! Let's merge it.
-        github_pr_merged:
-          do:
-            - actionId: finish_step
+    do:
+      - actionId: github_pr_review
+        params:
+          messages:
+            person: lucca
+            approved: "Great job adding the product name to the modal title! You can now merge your changes."
