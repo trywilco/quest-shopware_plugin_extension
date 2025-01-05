@@ -4,6 +4,7 @@ learningObjectives:
 hints:
   - Look for the image.html modal component in the plugin code
   - The product name should be passed to the modal title using the controller
+  - Look into the getTranslated() method to access the product name with ["name"]
 startFlow:
   do:
     - actionId: bot_message
