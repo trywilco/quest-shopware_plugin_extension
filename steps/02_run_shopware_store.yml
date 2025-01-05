@@ -12,8 +12,8 @@ startFlow:
         messages:
           - text: Let's get your Shopware store up and running. Use `docker compose up` to
               start the shop, and then open the web page to see it in action.
-          - text: Once the store is running, take a look around and let me know what the
-              material of the variant product is. This will help us ensure
+          - text: Once the store is running, take a look around and :instructions[let me know what the
+              material of the 'variant product' is]. This will help us ensure
               everything is working smoothly.
 
 trigger:
